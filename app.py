@@ -17,11 +17,12 @@ load_dotenv()
 
 app = Flask(__name__)
 
-CORS(app)
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 app.secret_key = os.getenv("SECRET_KEY") or 'dksdjf)9dewjj*edf'
 
-app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_TYPE'] =  'filesystem'
+app.congig['SESSION_FILE_DIR'] = '/flask_session'
 app.config['SESSION_PERMANENT'] = False
 Session(app)
 
