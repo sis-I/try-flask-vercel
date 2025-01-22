@@ -8,7 +8,7 @@ from flask import (Flask,
                    jsonify,
                    send_from_directory
                   )
-# from flask_cors import CORS
+from flask_cors import CORS
 from flask_session import Session
 from dotenv import load_dotenv
 
@@ -17,7 +17,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# CORS(app)
+CORS(app)
 
 app.secret_key = os.getenv("SECRET_KEY") or 'dksdjf)9dewjj*edf'
 
