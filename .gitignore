@@ -1,11 +1,15 @@
 # Python Cache
 **/__pycache__/*
 
+# Flask Session
+flask_session/
+
 # Environments
 .venv
 venv
 .env.local
 .env
 
-
 .vercel
+
+.env*.local
